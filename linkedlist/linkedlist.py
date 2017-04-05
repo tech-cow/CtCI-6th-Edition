@@ -33,7 +33,7 @@ class LinkedList(object):
             self.head = Node(val)
         else:
             temp = Node(val) #创建Temp Node
-            temp.next = (self.head)  #指向Head
+            temp.next = self.head  #指向Head
             self.head = temp #把head的reference改到这个Temp Node
 
     #在末尾Insert
@@ -52,13 +52,57 @@ class LinkedList(object):
         for _ in xrange(10):
             self.insert_tail(randint(0,9))
 
-    
+    #Search
+    def search(self, val):
+        if self.head == None:
+            raise ValueError("List is empty")
 
+        cur = self.head
+        while cur:
+            if cur.val == val:
+                return True
+            else:
+                cur = cur.next
+        return False
 
-#   Search: 寻找LinkedList拥不拥有某个数，没有则返回Error
-#   Delete: 先调用Search，然后删除。Search不到则返回Error
+    #Delete V1 using Prev
+    def delete_1(self, val):
+        if self.head == None:
+            return self.head
+
+        cur = self.head
+        prev = None
+
+        while cur:
+            if cur.val == val:
+                if prev:
+                    prev.next = cur.next
+                else:
+                    self.head = cur.next
+            prev = cur
+            cur = cur.next
+
+    #Delete V2 not using Prev
+    def delete_2(self, val):
+        if self.head == None:
+            return self.head
+
+        cur = self.head
+        #Edge case
+        if cur.val == val:
+            self.head = cur.next
+
+        #The rest
+        while cur.next:
+            if cur.next.val == val:
+                cur.next = cur.next.next
+            else:
+                cur = cur.next
+
 
 #Test
 ll = LinkedList()
 ll.insert_multiple()
+ll.display()
+ll.delete_2(3)
 ll.display()
