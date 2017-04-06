@@ -18,11 +18,10 @@
 # Time complexity: O(N)
 #=======================================================================
 
-# High level
-# keep track of two lists
-# add nodes less than partition to one list
-# add remaining nodes to the second
-# append them and return the head
+# 思路
+# 设置俩Dummy Node用来指针，记住存一下他们的起始指针，用于之后返回
+# 将第一个Dummy Node的结尾指像 第二个Dummy Node的起始
+# 返回第一个Dummy Node 的 起始.next
 
 from linkedlist import LinkedList
 from linkedlist import Node
@@ -47,7 +46,7 @@ def partition_list(ll, x):
     return dummy1.next
 
 
-#多谢了个display的方程，LinkedList自带的方程打印出来很诡异
+#多写了个display的方程，LinkedList自带的方程打印出来很诡异
 def display(dummy1):
     arr = []
     while dummy1:
