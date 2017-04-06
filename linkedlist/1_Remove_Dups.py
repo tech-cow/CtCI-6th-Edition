@@ -48,6 +48,6 @@ def remove_dups_2(ll, val):
 #Some Tests:
 ll = LinkedList()
 ll.generate()
-ll.display()
+print(ll)
 remove_dups_2(ll, 3)
-ll.display()
+print(ll)

@@ -23,8 +23,7 @@ ll.insert_multiple([1,2,3,9,10,11])
 cur = ll.head
 for _ in xrange(3):
     cur = cur.next
-ll.display()
-
+print(ll)
 #This should delete 9
 delete_middle_node(cur)
-ll.display()
+print(ll)

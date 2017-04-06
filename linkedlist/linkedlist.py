@@ -19,13 +19,15 @@ class LinkedList(object):
         self.size = size
 
     #Display
-    def display(self):
+    def __str__(self):
         res = []
         cur = self.head
         while cur:
             res.append(str(cur.val))
             cur = cur.next
-        print "->".join(res)
+        return ' -> '.join(res)
+
+
 
     #在头Insert
     def insert_head(self, val):
