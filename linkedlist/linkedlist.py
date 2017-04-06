@@ -98,11 +98,3 @@ class LinkedList(object):
                 cur.next = cur.next.next
             else:
                 cur = cur.next
-
-
-#Test
-ll = LinkedList()
-ll.insert_multiple()
-ll.display()
-ll.delete_2(3)
-ll.display()
