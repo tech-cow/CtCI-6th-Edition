@@ -8,12 +8,6 @@ from linkedlist import LinkedList
 # Hash Table
 # Space complexity: O(N)
 # Time complexity: O(N)
-
-# No buffer
-# Space complexity: O(1)
-# Time complexity: O(N^2)
-
-#Hash Table
 def remove_dups(ll, prev=None):
     head = ll.head
     cur = ll.head
@@ -28,7 +22,10 @@ def remove_dups(ll, prev=None):
         cur = cur.next
     return head
 
-#2 Pointers (Runner Methods)
+
+# 2 Pointers (Runner Methods)
+# Space complexity: O(1)
+# Time complexity: O(N^2)
 def remove_dups_2(ll, val):
     head = ll.head
     cur = ll.head
