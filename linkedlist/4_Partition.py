@@ -36,7 +36,6 @@ def partition_list(ll, x):
         if head.val < x:
             cur1.next = head
             cur1 = cur1.next
-            print cur1
         else:
             cur2.next = head
             cur2 = cur2.next
@@ -45,13 +44,19 @@ def partition_list(ll, x):
     cur2.next = None
     cur1.next = dummy2.next
 
-    print dummy1
-    print dummy1.next.val
     return dummy1.next
+
+
+#多谢了个display的方程，LinkedList自带的方程打印出来很诡异
+def display(dummy1):
+    arr = []
+    while dummy1:
+        arr.append(str(dummy1.val))
+        dummy1 = dummy1.next
+    print " -> ".join(arr)
 
 
 ll = LinkedList()
 ll.insert_multiple([6, 7, 8, 9, 5, 2, 1, 3, 4])
 print(ll)
-partition_list(ll, 3)
-print(ll)
+display(partition_list(ll, 6))
