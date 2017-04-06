@@ -47,10 +47,15 @@ class LinkedList(object):
                 cur = cur.next
             cur.next = temp
 
-    #Random多位数Insert
-    def insert_multiple(self):
+    #Generate Insert 10位数
+    def generate(self):
         for _ in xrange(10):
             self.insert_tail(randint(0,9))
+
+    #Insert自定义多位数
+    def insert_multiple(self, val):
+        for v in val:
+            self.insert_tail(v)
 
     #Search
     def search(self, val):

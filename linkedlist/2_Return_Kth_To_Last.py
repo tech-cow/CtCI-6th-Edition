@@ -48,7 +48,7 @@ def get_kth_to_last_node_2(ll, k):
 
 
 ll = LinkedList()
-ll.insert_multiple()
+ll.generate()
 ll.display()
 print(get_kth_to_last_node(ll,3).val)
 print(get_kth_to_last_node_2(ll,3).val)

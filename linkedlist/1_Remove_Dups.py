@@ -47,7 +47,7 @@ def remove_dups_2(ll, val):
 
 #Some Tests:
 ll = LinkedList()
-ll.insert_multiple()
+ll.generate()
 ll.display()
 remove_dups_2(ll, 3)
 ll.display()
