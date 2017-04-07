@@ -74,6 +74,7 @@ def ll_length(node):
     while node:
         node = node.next
         count += 1
+    return count
 
 
 
